@@ -4,3 +4,5 @@ VALUES('Sita','Rama','6th cross','Wizag','Andrapradesh',765434,457545809,'vwx@gm
 ('Sita','Rama','6th cross','Wizag','Andrapradesh',765434,457545809,'vwx@gmail.com','Friends')
 
 Select * from AddressBook;
+
+--------here we areadding the person with same information but only changeing with the type----------
