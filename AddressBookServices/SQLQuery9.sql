@@ -11,5 +11,7 @@ UPDATE AddressBook set Type='Friends' where FirstName='hasini';
 UPDATE AddressBook set Type='Profession' where FirstName='Shankar';
 UPDATE AddressBook set Type='Family' where FirstName='Mahesh';
 
+Delete from AddressBook where LastName is NULL;
+
 
 
