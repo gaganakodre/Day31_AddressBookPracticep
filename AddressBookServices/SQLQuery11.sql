@@ -74,4 +74,43 @@ VALUES('Sita','Rama','6th cross','Wizag','Andrapradesh',765434,457545809,'vwx@gm
 
 Select * from AddressBook;
 
---------here we areadding the person with same information but only changeing with the type----------
+
+-------------UC12-Craeting separete table for the AddrssBook---------------
+CREATE TABLE Person(
+PersonId int IDENTITY PRIMARY KEY,
+FirstName varchar(200),
+LastName varchar(200),
+PhoneNumber int
+);
+select * from Person;
+insert into Person values('shree','gowri',1234567890);
+insert into Person values('Mahesh','Koder',1323567775);
+insert into Person values('shankar','rana',1234567897);
+
+create table PersonType(
+PersonId int foreign key   REFERENCES   Person(PersonId ),
+Type varchar(200));
+
+insert into PersonType
+values(4,'Family'),(9,'Friends'),(11,'Professional');
+
+select * from PersonType;
+
+CREATE TABLE PersonAddress(
+PersonId int foreign key   REFERENCES   Person(PersonId ),
+Address varchar(200),
+Zip int ,
+City varchar(20),
+State varchar(200)
+);
+select * from PersonAddress;
+insert into PersonAddress 
+values(4,'1st cross',234,'Bengaluru','Karnataka'),(9,'2nd cross',345,'Jaipur','Rajasthan'),(11,'3rd cross',567,'Mumbai','Maharastra');
+
+
+select * from Person;
+select * from PersonType;
+select * from PersonAddress;
+
+
+
